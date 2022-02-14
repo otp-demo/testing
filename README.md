@@ -54,14 +54,15 @@
 
 ### Resolutions 
 
-* create.sh script (make_template.sh script) now correctly adjusts the values.yaml file for aws (this has been fixed, but we need to check)
-* RHSSO namespace is created correctly 
+* create.sh script (make_template.sh script) now correctly adjusts the values.yaml file for aws
+* Submariner now waits for a cluster as well as a submariner deployment prior to applying a NAT patch
+* RHSSO Sync waves adjusted 
 * We need to be careful of elastic IP limits in AWS and region constraints in Azure. Might be best to start with a decently clean slate before we film demos 
 
-* issue with the infra script not tabbing values cirrectly
+* Infra script not tabbing values cirrectly
 ```
 ComparisonError
 rpc error: code = Unknown desc = `kustomize build /tmp/https___github.com_otp-demo-test_otp-gitops/0-bootstrap/single-cluster/1-infra --enable-alpha-plugins` failed exit status 1: Error: error converting YAML to JSON: yaml: line 34: did not find expected '-' indicator
 ``` 
-* resolved by tabbing infra deployments correctly 
+* resolved by tabbing infra deployments correctly
 
